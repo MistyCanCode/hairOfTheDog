@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hair of the Dog</title>
+
+<!-- my links and scripts-->
+<link rel="stylesheet" href="hotdog.css"></link>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<!--link for font-->
+<link href="https://fonts.googleapis.com/css?family=Baloo+Tamma|Roboto&display=swap" rel="stylesheet">
+
+<style>
+	body {
+		height: 250px;
+		background-color: #b7ebf9;
+		background-image: radial-gradient(#b7ebf9 10%, #D9CCC3 90%);
+	}
+	img{
+		height: 200px;
+		margin: 20px;
+	}
+	p{
+		
+		float: right;
+		margin: 20px;
+		padding: 10px;
+		font-size: x-large;
+		font-variant: small-caps;
+		font-weight: italic;
+		background-color: black;
+		color: #b7ebf9;
+	}
+	ul{
+		list-style-type: none;
+	}
+</style>
+
+</head>
+
+<body>
+	<header>
+	<div class="topnav">
+		<a style="float:right" id="date"></a>
+		<a href="index.html">Home</a>
+		<a class="active" href="about.html">About</a>
+		<a href="pricing.html">Pricing</a>
+		<a href="contact.html">Contact</a>
+		<a href="photos.html">Photo Gallery</a>
+		<a href="mapsPage.html">Find Us</a>
+	</div>
+	<script>            //javascript for getting the date and putting it in the navbar
+		var day = new Date();
+		var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+		var m = new Date();
+		var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+		var d = new Date();
+
+		var y = new Date();
+
+		document.getElementById("date").innerHTML = days[day.getDay()] + " "+ months[m.getMonth()] + " "+ d.getDate()+", " + y.getFullYear();
+	</script>              <!--end of javascript for date-->
+	</header>
+	
+<ul>
+	<li><div><!--container around pic and bio-->
+		<div><img src="tankGirl2.jpeg"></img><!--container for pic-->
+			<!--<div><!--container for bio-->
+			<p>Lorelei has been grooming since she was in high school. Shadowing and bathing for her sister, she quickly fell
+			in love with the craft. When she moved from Florida to Tennessee after school she started work for PetCo where
+			she continued her training and advanced to management. From there, she decided it was time to start her own grooming 
+			business. With the help of her co-owner Samantha, and her supportive family, she made the leap to Hair of the Dog.</p>
+			</div>
+		</div>
+		</div>
+	</li>
+		<br><br>
+		<li><div><!--container around pic and bio-->
+		<div><img src="tankGirl4.png"></img><!--container for pic-->
+			<!--<div><!--container for bio-->
+			<p>Samantha met Lorelei while they both worked at PetCo. They became instant friends, bonding over their shared love of
+			animals and their passion for grooming. Samantha started grooming 10 years ago while working toward an Associates Degree
+			to be a Veterenary Assistant. While she has completed her degree, she also fell into competetive grooming. So when the opportunity
+			came to open a grooming business, she jumped at the chance. This is the team that makes up Hair of the Dog.</p>
+			</div>
+		</div>
+	</li>
+</ul>
+	
+</body>
+	
+<footer class="fixed-bottom">
+<div class="fixed-bottom">
+	<div><a href="https://www.designevo.com/logo-maker/" title="Free Online Logo Maker">DesignEvo free logo creator</a></div>
+	<div>Designed by <a href="mailto:mistycancode@gmail.com">Misty</a></div>
+</div>
+</footer>
+</html>

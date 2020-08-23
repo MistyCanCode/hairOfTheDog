@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hair of the Dog</title>
+
+<!-- my links and scripts-->
+<link rel="stylesheet" href="hotdog.css"></link>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="hotdog.js"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<!--link for font-->
+<link href="https://fonts.googleapis.com/css?family=Baloo+Tamma|Roboto&display=swap" rel="stylesheet">
+
+<style>
+	body{
+		background-color: #B8ECFA;
+		font-family: 'Baloo Tamma', cursive;
+	}
+	h1{
+		text-align: center;
+		font-weight: bold;
+		font-variant: small-caps;
+		color: #5A8AA4;
+	}
+	h2, h3{
+		font-weight: bold;
+		font-variant: small-caps;
+		color: #5b5b5b;
+		text-align: center;
+	}
+	p{
+		color: #5b5b5b;
+		font-size: medium;
+	}
+</style>
+</head>
+
+<body>
+	<header>
+	<div class="topnav">
+		<a style="float:right" id="date"></a>
+		<a href="index.html">Home</a>
+		<a href="about.html">About</a>
+		<a href="pricing.html">Pricing</a>
+		<a href="contact.html">Contact</a>
+		<a href="photos.html">Photo Gallery</a>
+		<a class="active" href="mapsPage.html">Find Us</a>
+	</div>
+	<script>            //javascript for getting the date and putting it in the navbar
+		var day = new Date();
+		var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+		var m = new Date();
+		var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+		var d = new Date();
+
+		var y = new Date();
+
+		document.getElementById("date").innerHTML = days[day.getDay()] + " "+ months[m.getMonth()] + " "+ d.getDate()+", " + y.getFullYear();
+	</script>              <!--end of javascript for date-->
+	</header>
+	
+	<h2>Find Us</h2>
+	<h3>Our Coverage Area</h3>
+	<div id="map" class="map"></div>
+	<!--script tag for the initmap callback function-->
+	<script>
+		
+		function initMap() {
+			var options = {
+				zoom: 10,
+				center: {lat:36.0770, lng:-87.3878}
+			}
+			var map = new google.maps.Map(document.getElementById('map'),options);
+			
+			var marker = new google.maps.Marker({
+				position:{lat:36.0770, lng:-87.3878},
+				map:map,
+			
+			});
+			
+			var cityCircle = new google.maps.Circle({
+				strokeColor: '#FF0000',
+				strokeOpacity: 0.8,
+				strokeWeight: 2,
+				fillColor: '#FF0000',
+				fillOpacity: 0.35,
+				map: map,
+				center: {lat:36.0770, lng:-87.3878},
+				radius: 15000
+			});
+			};
+	</script>
+	<!--Script tag for the google maps api-->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPflbeb_53tsgr47-ool3iaMFrrvbbHXU&callback=initMap"
+    async defer></script>
+	
+	
+	</body>
+
+<footer class="fixed-bottom">
+<div class="fixed-bottom">
+	<div>Logo made by <a href="https://www.designevo.com/logo-maker/" title="Free Online Logo Maker">DesignEvo free logo creator</a></div>
+	<div>Designed by <a href="mailto:mistycancode@gmail.com">Misty</a></div>
+</div>
+</footer>
+</html>

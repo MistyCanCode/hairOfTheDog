@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hair of the Dog</title>
+<!-- my links and scripts-->
+<link rel="stylesheet" href="hotdog.css"></link>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css" />
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<!--link for font-->
+<link href="https://fonts.googleapis.com/css?family=Baloo+Tamma|Roboto&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.js"></script>
+</head>
+<style>
+	body{
+		background-color: #B8ECFA;
+		justify-content: center;
+		margin: auto;
+	}
+	form{
+	margin: auto;
+	justify-content: center;
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+	font-family: 'Baloo Tamma', cursive;
+	}
+</style>
+<body>
+<header>
+	<div class="topnav">
+		<a style="float:right" id="date"></a>
+		<a href="index.html">Home</a>
+		<a href="about.html">About</a>
+		<a href="pricing.html">Pricing</a>
+		<a class="active" href="contact.html">Contact</a>
+		<a href="photos.html">Photo Gallery</a>
+		<a href="mapsPage.html">Find Us</a>
+	</div>
+	<script>            //javascript for getting the date and putting it in the navbar
+		var day = new Date();
+		var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+		var m = new Date();
+		var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+		var d = new Date();
+
+		var y = new Date();
+
+		document.getElementById("date").innerHTML = days[day.getDay()] + " "+ months[m.getMonth()] + " "+ d.getDate()+", " + y.getFullYear();
+	</script>              <!--end of javascript for date-->
+</header>
+
+<form action="send_form_email.php" method="POST" autocomplete="on" name="contactform">
+<fieldset>
+	<legend><h1>Contact Us</h1></legend>
+	First Name : <br>
+	<input type="text" name="firstname" id="firstname" autofocus required><br>
+	Last Name : <br>
+	<input type="text" name="lastname" id="lastname" required><br>
+	Phone Number : <br>
+	<input type="tel" name="phonenumber" id="phonenumber"><br>
+	Email : <br>
+	<input type="email" name="email" id="email" required><br>
+	Do you want an appointment? If so, please specify date : <br>
+	<input data-provide="datepicker" name="daterequest" id="daterequest"><br>
+	Message : <br>
+	<textarea name="message" id="message" rows="30" cols="50"></textarea><br><br>
+	<input type="submit" value="Submit Form"><!--<a href="http://www.freecontactform.com/email_form.php">Submit Form</a>-->
+	<input type="reset" value="Clear Form">
+	
+	<!--data validation for the form starts when the user clicks submit
+	*****************************changed validation to the send_form_email.php*************************
+	<script>
+		var $ = function(id) {
+			return document.getElementById(id);
+		};
+		
+		var processEntries = function() {
+			var firstname = $("firstname").value;
+			var lastname = $("lastname").value;
+			var phonenumber = $("phonenumber").value;
+			var email = $("email").value;
+			var message = $("message").value;
+			var error = "";
+			var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+			var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+			
+				if(phonenumber != phoneno)
+				{
+					error = "Phone number not valid, please enter in format XXX-XXX-XXXX";
+					alert(error);
+					$("phonenumber").focus();
+				}
+			
+			if(firstname == "" || lastname == "")
+			{
+				error = "Name values must be submitted, please enter first and last names.";
+				$("firstname").focus();
+			}
+			if(email != mailformat)
+			{
+				error = "Email not valid, please enter a valid email address.";
+				$("email").focus();
+			}
+			if(error = "")
+			{
+			//complete submit function
+			}
+			else
+			{
+				alert(error);
+			}
+		};
+		window.onload = function() {
+			$("submit").onclick = processEntries;
+			$("firstname").focus();
+		};
+	</script>-->
+</fieldset>
+</form>
+
+</body>
+
+<footer class="fixed-bottom">
+<div class="fixed-bottom">
+	<div>Logo made by <a href="https://www.designevo.com/logo-maker/" title="Free Online Logo Maker">DesignEvo free logo creator</a></div>
+	<div>Designed by <a href="mailto:mistycancode@gmail.com">Misty</a></div>
+</div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+</html>

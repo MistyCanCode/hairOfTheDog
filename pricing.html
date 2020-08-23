@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hair of the Dog</title>
+
+<!-- my links and scripts-->
+<link rel="stylesheet" href="hotdog.css"></link>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="hotdog.js"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<!--link for font-->
+<link href="https://fonts.googleapis.com/css?family=Baloo+Tamma|Roboto&display=swap" rel="stylesheet">
+
+<style>
+	body{
+		background-color: #D9CCC3;
+		font-family: 'Baloo Tamma', cursive;
+	}
+	h1{
+		text-align: center;
+		font-weight: bold;
+		font-variant: small-caps;
+		color: #5A8AA4;
+	}
+	h2, h4{
+		font-weight: bold;
+		font-variant: small-caps;
+		color: #5b5b5b;
+	}
+	p{
+		color: #B7EBF9;
+		font-size: x-large;
+		font-variant: small-caps;
+		font-weight: italic;
+	}
+	.background{
+		text-shadow:
+			-1px -1px 0 #000,
+			1px -1px 0 #000,
+			-1px 1px 0 #000,
+			1px 1px 0 #000;
+	}
+	img{
+		height: 100px;
+	}
+</style>
+</head>
+
+<body>
+	<header>
+	<div class="topnav">
+		<a style="float:right" id="date"></a>
+		<a href="index.html">Home</a>
+		<a href="about.html">About</a>
+		<a class="active" href="pricing.html">Pricing</a>
+		<a href="contact.html">Contact</a>
+		<a href="photos.html">Photo Gallery</a>
+		<a href="mapsPage.html">Find Us</a>
+	</div>
+	<script>            //javascript for getting the date and putting it in the navbar
+		var day = new Date();
+		var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+		var m = new Date();
+		var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+		var d = new Date();
+
+		var y = new Date();
+
+		document.getElementById("date").innerHTML = days[day.getDay()] + " "+ months[m.getMonth()] + " "+ d.getDate()+", " + y.getFullYear();
+	</script>              <!--end of javascript for date-->
+	</header>
+	
+<img src="logo.jpg" style="float:right"></img>	
+<h1>Grooming Prices</h1>	<br><br><br><br><br>
+<h2>Shampoo &amp Blowdry</h2>
+<p class="background">All shampoos include blowdry unless otherwise specified. We do not use heat during blowdries on brachycephalic breeds.</p>
+<ul>
+	<li><h4>30lbs and under : $30.00</h4></li>
+	<li><h4>30lbs to 50lbs : $40.00</h4></li>
+	<li><h4>50lbs to 75lbs : $45.00</h4></li>
+	<li><h4>75lbs and up : $50.00</h4></li>
+</ul><br>
+<h2>Haircuts</h2>
+<p class="background">All haircuts include shampoo and blowdry unless otherwise specified. We do not use heat on brachycephalic breeds.</p><br>
+<ul>
+	<li><h4>30lbs and under : $40.00</h4></li>
+	<li><h4>30lbs to 50lbs : $50.00</h4></li>
+	<li><h4>50lbs to 75lbs : $55.00</h4></li>
+	<li><h4>75lbs and up : $60.00</h4></li>
+	<li><h4>Shave down only, no shampoo : $25.00 and up</h4></li>
+</ul>
+<h2>Manicures &amp Pedicures</h2>
+<p class="background">We reserve the right to refuse nail trims on any dog when doing so could cause injury to them.</p><br>
+<ul>
+	<li><h4>nail trims : $20.00</h4></li>
+	<li><h4>nail trims per paw : $5.00</h4></li>
+	<li><h4>nail grinding : $16.00</h4></li>
+	<li><h4>nail grinding per paw : $4.00</h4></li>
+	<li><h4>nail file finishing : $5.00</h4></li>
+	<li><h4>nail polish : $10.00</h4></li>
+</ul>
+<h2>Add Ons</h2>
+<p class="background">Any add on can be added to any service.</p><br>
+<ul>All add ons : $5.00 or pick 4 for $30.00
+	<li><h4>teeth brushing</h4></li>
+	<li><h4>gland expression</h4></li>
+	<li><h4>wrinkle cleaning</h4></li>
+	<li><h4>trim facial hair</h4></li>
+	<li><h4>trim booty hair</h4></li>
+	<li><h4>trim toe hair</h4></li>
+	<li><h4>ear cleaning</h4></li>
+	<li><h4>dog freshening spray</h4></li>
+	<li><h4>deshedding</h4></li>
+	<li><h4>good ole brushing and detangling</h4></li>
+</ul>
+<h2>Color &amp Special Services</h2>
+<p class="background">We use only pet safe color on our fur friends.</p><br>
+<ul>
+	<li><h4>airbrush stenciling : $5.00 per stencil</h4></li>
+	<li><h4>one color one area : $10.00</h4></li>
+	<li><h4>each additional area : $5.00</h4></li>
+	<li><h4>each additional color : $5.00</h4></li>
+	<li><h4>custom color application : by consultation only</h4></li>
+</ul>
+<h2>Products We Use &amp Love</h2>
+<p class="background">The links below may be affiliate links. So, by clicking them, you are supporting us!</p>
+<ul>
+	<li><a href="https://amzn.to/2PXP7R4"><img src="https://images-na.ssl-images-amazon.com/images/I/31bXb76bYQL.jpg">John Paul Pet Oatmeal Conditioning Rinse for Dogs and Cats, Soothing Sensitive Skin Formula, Moisturizes and Revitalizes Dry Skin and Fur, 16-Ounce</a></li>
+	<li><a href="https://amzn.to/2NJE8Ys"><img src="https://images-na.ssl-images-amazon.com/images/I/31QQjHs3YEL.jpg">John Paul Pet Oatmeal Shampoo for Dogs and Cats, Sensitive Skin Formula Soothes and Moisturizes Dry Skin and Fur, 16-Ounce</a></li>
+	<li><a href="https://amzn.to/2ClxnqE"><img src="https://images-na.ssl-images-amazon.com/images/I/31m6QKKV73L.jpg">John Paul Pet Lavender Mint Detangling Spray for Dogs and Cats, Soothes Moisturizes and Replenishes Dry Unruly Fur, Non-Aerosol, 8-Ounce</a></li>
+	<li><a href="https://amzn.to/34Jcy4O"><img src="https://images-na.ssl-images-amazon.com/images/I/31PYapx9f8L.jpg">John Paul Pet Oatmeal Conditioning Spray for Dogs and Cats, Sensitive Skin Formula Soothes and Moisturizes Dry Skin and Fur, Non-Aerosol, 8-Ounce</a></li>
+	<li><a href="https://amzn.to/32pJ36j"><img src="https://images-na.ssl-images-amazon.com/images/I/31CFeJp1YsL.jpg">John Paul Pet Ear and Eye Pet Wipes for Dogs and Cats, Infused with Aloe, 7" x 7" Sheets in 45-Count Dispenser, Unscented</a></li>
+	<li><a href="https://amzn.to/2qsJWOd"><img src="https://images-na.ssl-images-amazon.com/images/I/3194PkSPoDL.jpg">John Paul Pet Super Bright Shampoo for Dogs and Cats, Highlighting Formula Safely Whitens and Brightens Fur, 16-Ounce</a></li>
+	<li><a href="https://amzn.to/2PZCNj8"><img src="https://images-na.ssl-images-amazon.com/images/I/31ztJ5YEOYL.jpg">John Paul Pet Lavender Mint Shampoo for Dogs and Cats, Soothes Calms and Hydrates, 16-Ounce</a></li>
+	<li><a href="https://amzn.to/2K0YBXJ"><img src="https://images-na.ssl-images-amazon.com/images/I/31MrdSXdWvL.jpg">John Paul Pet Australian Tea Tree and Eucalyptus Oil Shampoo for Dogs and Cats, Cleanses Moisturizes and Soothes Skin Irritations, 16-Ounce</a></li>
+	<li><a href="https://amzn.to/34GGu18"><img src="https://images-na.ssl-images-amazon.com/images/I/41NNovf1pDL.jpg">John Paul Pet 16 oz. Tearless Gentle Puppy and Kitten Shampoo</a></li>
+	<li><a href="https://amzn.to/2p2TTBK"><img src="https://images-na.ssl-images-amazon.com/images/I/31mv7NQ%2Bz9L.jpg">John Paul Pet Tea Tree Conditioning Spray for Dogs and Cats, Soothes and Conditions, 8-Ounce</a></li>
+	<li><a href="https://amzn.to/2CneCmT"><img src="https://images-na.ssl-images-amazon.com/images/I/41euH1Yw1%2BL.jpg">John Paul Pet Calm Moisture Shampoo</a></li>
+	<li><a href="https://amzn.to/2NsMRzC"><img src="https://images-na.ssl-images-amazon.com/images/I/31z9%2BQ-dCzL.jpg">John Paul Pet Awapoochi Shampoo</a></li>
+	<li><a href="https://amzn.to/34CH7cf"><img src="https://images-na.ssl-images-amazon.com/images/I/31gmRHLPL6L.jpg">John Paul Pet Tearless Odor Absorbing Shampoo, Clean and Fresh Low PH Formula for Puppies, Dogs, Kittens and Cats, 16-Ounce</a></li>
+	<li><a href="https://amzn.to/32svfIi"><img src="https://images-na.ssl-images-amazon.com/images/I/41k8-Ur733L.jpg">Arctic Fox Vegan and Cruelty-Free Semi-Permanent Hair Color Dye (8 Fl. Ounces, Purple Rain)</a></li>
+	<li><a href="https://amzn.to/2PXbx4U"><img src="https://images-na.ssl-images-amazon.com/images/I/317Hgz1PtQL.jpg">Arctic Fox Vegan and Cruelty-Free Semi-Permanent Hair Color Dye (4 Fl. Ounces, Aquamarine)</a></li>
+	<li><a href="https://amzn.to/2rlXpI1"><img src="https://images-na.ssl-images-amazon.com/images/I/41Hbaw9i9vL.jpg">Arctic Fox Vegan and Cruelty-Free Semi-Permanent Hair Color Dye (8 Fl. Ounces, Poseidon)</a></li>
+	<li><a href="https://amzn.to/2CpAXjA"><img src="https://images-na.ssl-images-amazon.com/images/I/31QBgJkzLRL.jpg">Arctic Fox Vegan and Cruelty-Free Semi-Permanent Hair Color Dye (4 Fl. Ounces, Ritual)</a></li>
+	<li><a href="https://amzn.to/2K0wS9w"><img src="https://images-na.ssl-images-amazon.com/images/I/31wXc-MQm3L.jpg">Arctic Fox Vegan and Cruelty-Free Semi-Permanent Hair Color Dye (4 Fl. Ounces, Virgin Pink)</a></li>
+	<li><a href="https://amzn.to/34HkQdo"><img src="https://images-na.ssl-images-amazon.com/images/I/41xwKpkm00L.jpg">Arctic Fox Semi Permanent Hair Dye - 4 Ounce Cosmic Sunshine #11</a></li>
+	<li><a href="https://amzn.to/2CpUwYY"><img src="https://images-na.ssl-images-amazon.com/images/I/41Qgfc%2BrEeL.jpg">Arctic Fox Semi Permanent Hair Dye - 4 Ounce Phantom Green #9</a></li>
+	<li><a href="https://amzn.to/33tMjPw"><img src="https://images-na.ssl-images-amazon.com/images/I/41Crg4eg0VL.jpg">Furminator Undercoat Deshedding Tool for Large Dogs – Short Hair</a></li>
+	<li><a href="https://amzn.to/33uQdHN"><img src="https://images-na.ssl-images-amazon.com/images/I/41-Adk2x4pL.jpg">BestdealForever Pet Series Zoom Groom Rubber Wet Or Dry Brush Large Dogs Cats Puppies Choose Color</a></li>
+	<li><a href="https://amzn.to/2rqzQhp"><img src="https://images-na.ssl-images-amazon.com/images/I/415iVFIEWDL.jpg">Ruff 'n Ruffus Self-Cleaning Slicker Brush + 2 Free Bonuses | Steel Comb + Pet Nail Clippers |Grooming Supplies Great for All Breeds & Hair Types</a></li>
+	<li><a href="https://amzn.to/2K1p3ka"><img src="https://images-na.ssl-images-amazon.com/images/I/41G6o1BMlyL.jpg">BOSHEL Dog Nail Clippers and Trimmer with Safety Guard to Avoid Over-Cutting Nails & Free Nail File - Razor Sharp Blades - Sturdy Non Slip Handles </a></li>
+	<li><a href="https://amzn.to/36JW6CS"><img src="https://images-na.ssl-images-amazon.com/images/I/41EHh5QAYJL.jpg">Dremel 7300-PT 4.8V Cordless Pet Dog Nail Grooming & Grinding Tool, Safely & Humanely Trim Pet & Dog Nails</a></li>
+</ul>
+	
+</body>
+
+<footer class="fixed-bottom">
+<div class="fixed-bottom">
+	<div>Logo made by <a href="https://www.designevo.com/logo-maker/" title="Free Online Logo Maker">DesignEvo free logo creator</a></div>
+	<div>Designed by <a href="mailto:mistycancode@gmail.com">Misty</a></div>
+</div>
+</footer>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hair of the Dog</title>
+
+<!-- my links and scripts-->
+<link rel="stylesheet" href="hotdog.css"></link>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="hotdog.js"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<!--link for font-->
+<link href="https://fonts.googleapis.com/css?family=Baloo+Tamma|Roboto&display=swap" rel="stylesheet">
+<style>
+body{
+ background-color: #b7ebf9;
+}
+.image{
+	background-image: url("logo.jpg");
+	background-color: #b7ebf9;
+	height: 500px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	padding: 50px;
+}
+p{
+	margin: auto;
+	background-color: #b7ebf9;
+	text-align: center;
+	font-weight: bold;
+}
+footer{
+	background-color: #b7ebf9;
+}
+</style>
+</head>
+
+<body>
+	<header>
+	<div class="topnav">
+		<a style="float:right" id="date"></a>
+		<a href="loginPage.html">Login</a>
+		<a class="active" href="index.html">Home</a>
+		<a href="about.html">About</a>
+		<a href="pricing.html">Pricing</a>
+		<a href="contact.html">Contact</a>
+		<a href="photos.html">Photo Gallery</a>
+		<a href="mapsPage.html">Find Us</a>
+	</div>
+	<script>            //javascript for getting the date and putting it in the navbar
+		var day = new Date();
+		var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+		var m = new Date();
+		var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+		var d = new Date();
+
+		var y = new Date();
+
+		document.getElementById("date").innerHTML = days[day.getDay()] + " "+ months[m.getMonth()] + " "+ d.getDate()+", " + y.getFullYear();
+	</script>              <!--end of javascript for date-->
+	</header>
+	<div>
+		<p>We love dirty dogs</p>
+		<!--<img src="logo.jpg" alt="Hair of the Dog" title="Hair of the Dog" />-->
+	</div>
+	<!-- two divs for two reviews-->
+	<div class="container" style="background-color:#b7ebf9">
+	<button style="background-color:#b7ebf9;color:DimGrey;font-weight:bold;font-variant:small-caps">Click for Reviews</button><br>
+	<div class="reviews" id="review1" style="display:none"><p style="background-color:#fff;font-size:20px">Our dogs love Lorelei, when we go see her they get so excited
+										and they wag so hard and run to each other to fight over who gets to her first.</p><hr></div>
+	<div class="reviews" id="review2" style="display:none"><p style="background-color:#fff;font-size:20px">Samantha is so awesome! She takes such great care of our senior boy. 
+										she always takes special care with him and gives him extra loving when she does
+										his nail trims. Because you know, its torture.</p><hr></div>
+	<div class="reviews" id="review3" style="display:none"><p style="background-color:#fff;font-size:20px">I love this team of groomers. We will never use anyone else. They are flexible with 
+										their schedules and are always willing to work with ours. Plus we can take the dogs to 
+										them or they come to us. And our pups smell as fresh as the spring rain.</p><hr></div>
+	<div class="reviews" id="review4" style="display:none"><p style="background-color:#fff;font-size:20px">Lorelei always does such a good job. She treats my dog with a love like its her own furchild.
+										I can't stress this enough, you will not be disapointed. You can thank me later. 5 stars!</p><hr></div>
+	<div><!--for the container-->
+	<div class="image"></div>
+	
+</body>
+
+<footer class="fixed-bottom">
+<div class="fixed-bottom">
+	<div>Logo made by <a href="https://www.designevo.com/logo-maker/" title="Free Online Logo Maker">DesignEvo free logo creator</a></div>
+	<div>Designed by <a href="mailto:mistycancode@gmail.com">Misty</a></div>
+<div>
+</footer>
+</html>
